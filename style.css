@@ -1,0 +1,238 @@
+:root {
+  --primary-color: #131318;
+  --secondary-color: rgba(19, 19, 24, 0.7);
+  --Dark-02: #424247;
+  --White-01: #fff;
+  --orange-color: #ff5400;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Mulish", sans-serif;
+}
+
+body {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.mobile {
+  display: none;
+}
+
+.website {
+  padding: 3.25rem 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.logo img {
+  width: 48px;
+  height: 48px;
+}
+
+.logo-text {
+  width: 200px;
+}
+.logo .logo-text h2 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+.logo .logo-text span {
+  color: var(--orange-color);
+}
+
+.website ul {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.website ul li {
+  list-style: none;
+}
+
+.website ul li a {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.125rem;
+  color: var(--Dark-02);
+}
+
+.website ul li:first-child a {
+  color: var(--orange-color);
+}
+
+/* banner */
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  max-width: 80%;
+  margin: auto;
+  border-radius: 16px;
+  background: linear-gradient(
+      180deg,
+      rgba(19, 19, 24, 0.8) 0%,
+      rgba(19, 19, 24, 0) 100%
+    ),
+    url(Images/banner.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.banner-text {
+  width: 60%;
+  text-align: center;
+  color: var(--White-01);
+  margin-bottom: 3rem;
+}
+
+.banner-text .title {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.banner-text .motto {
+  margin-top: 1.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.form-container {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.form-container {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.form-container input {
+  width: 150px;
+  padding: 1rem 0 1rem 1rem;
+  border-radius: 8px;
+  border: none;
+}
+
+.form-container input .form-container input::placeholder {
+  color: rgba(19, 19, 24, 0.5);
+  font-weight: 400;
+}
+
+.form-container .options select {
+  width: 150px;
+  height: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  border: none;
+  color: rgba(19, 19, 24, 0.5);
+  font-weight: 400;
+}
+
+.form-container button {
+  width: 150px;
+  padding: 1rem;
+  border-radius: 8px;
+  border: none;
+  color: var(--White-01);
+  font-weight: 400;
+  background-color: var(--orange-color);
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive Design */
+/* Tablet */
+@media screen and (max-width: 992px) {
+  body {
+    width: 95%;
+  }
+
+  /* navbar */
+  .website {
+    display: none;
+  }
+  .mobile {
+    padding: 1.25rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hidden-nav svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* banner */
+  .banner {
+    height: auto;
+    padding: 2rem;
+  }
+
+  .banner-text .title {
+    font-size: 2rem;
+  }
+
+  .banner-text .motto {
+    font-size: 0.85rem;
+  }
+  .banner .form-container {
+    width: 80%;
+    flex-direction: column;
+  }
+
+  .form-container input {
+    width: 96%;
+  }
+
+  .form-container .options select {
+    width: 100%;
+  }
+
+  .form-container button {
+    width: 100%;
+    margin: auto;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+  .logo .logo-text h2 {
+    font-size: 1.325rem;
+    font-weight: 800;
+  }
+
+  .logo img {
+    height: 36px;
+    width: 36px;
+  }
+
+  .banner .banner-text {
+    width: 100%;
+  }
+  .banner-text .title {
+    font-size: 1.35rem;
+  }
+  .banner .motto {
+    font-size: 0.75rem;
+  }
+  .form-container input {
+    width: 95%;
+  }
+}
