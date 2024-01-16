@@ -39,7 +39,7 @@ body {
 }
 
 .logo-text {
-  max-width: !00%;
+  max-width: 100%;
 }
 .logo .logo-text h2 {
   font-size: 2rem;
@@ -202,6 +202,43 @@ body {
   width: 100%;
   height: 100%;
 }
+
+footer {
+  background: rgba(19, 19, 24, 0.05);
+  height: 502px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .logo {
+  display: flex;
+  justify-content: center;
+}
+footer .container {
+  width: 55%;
+  text-align: center;
+}
+
+footer .footer-paragraph {
+  font-weight: 400;
+  margin: 1rem 0 2rem 0;
+}
+
+footer .social {
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(19, 19, 24, 0.1);
+}
+
+footer .social svg {
+  cursor: pointer;
+}
+
+footer .copywrite {
+  margin-top: 3rem;
+}
 /* Responsive Design */
 /* Tablet */
 @media screen and (max-width: 992px) {
@@ -272,6 +309,8 @@ body {
     justify-content: center;
     align-items: center;
   }
+
+  /* footer */
 }
 
 /* Mobile */
