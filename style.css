@@ -39,7 +39,7 @@ main {
 .website {
   padding: 3.25rem 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .logo {
@@ -408,6 +408,96 @@ main {
   border: 1px solid rgba(233, 68, 68, 0.2);
   background: rgba(233, 68, 68, 0.05);
 }
+
+/* Blogs */
+.blog {
+  margin-bottom: 100px;
+}
+
+.blog .see-more {
+  text-align: center;
+}
+.blog-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.blog-text h2 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.blog-card h3 {
+  color: var(--Dark-02);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.blog-text p {
+  color: var(--secondary-color);
+  font-weight: 400;
+}
+.blog-grid {
+  display: grid;
+  grid-template-areas:
+    "P P Q Q R R"
+    "S S T T U U";
+  gap: 1.5rem;
+  grid-template-rows: repeat(2, 450px);
+}
+
+.blog-card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+}
+
+.blog-card-1 {
+  grid-area: S;
+}
+
+.blog-card-2 {
+  grid-area: Q;
+}
+
+.blog-card-3 {
+  grid-area: P;
+}
+
+.blog-card-4 {
+  grid-area: R;
+}
+
+.blog-card-5 {
+  grid-area: T;
+}
+
+.blog-card-6 {
+  grid-area: U;
+}
+
+.blog-card img {
+  align-self: center;
+  width: 95%;
+  height: 60%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
 /* perfect-place */
 
 .perfect-place {
@@ -740,7 +830,8 @@ footer .copywrite {
   .dest-para,
   .choose-us .para,
   .box p,
-  .perfect-place .left .para {
+  .perfect-place .left .para,
+  .blog-text p {
     font-size: 0.75rem;
     font-weight: 400;
   }
@@ -749,7 +840,9 @@ footer .copywrite {
   .popular-tour .title,
   .dest-title,
   .choose-us .title,
-  .perfect-place .left .title {
+  .perfect-place .left .title,
+  .blog-text h2,
+  .blog-card h2 {
     font-size: 1.5rem;
     font-weight: 800;
   }
@@ -783,7 +876,8 @@ footer .copywrite {
   }
 
   .destination .dest-title,
-  .dest-para {
+  .dest-para,
+  .blog {
     margin-bottom: 1rem;
     width: 100%;
   }
@@ -797,6 +891,26 @@ footer .copywrite {
     font-size: 1.25rem;
   }
 
+  /* blogs */
+  .blog-grid {
+    display: grid;
+    grid-template-areas:
+      "P"
+      "Q"
+      "R"
+      "S"
+      "T"
+      "U";
+    gap: 1.5rem;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+  .blog-card h3 {
+    font-size: 1.25rem;
+  }
+  .blog-grid {
+    gap: 1rem;
+  }
   /* choose-us */
   .choose-us .box-3 {
     order: 10;
